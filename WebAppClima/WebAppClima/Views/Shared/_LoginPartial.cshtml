@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+         <ul class="JLMA-nav JLMA-navbar-nav navbar-right">
+            <li>
+                <a style="background-color:cadetblue">Hola: [@User.Identity.GetUserName()]</a>            
+            </li>
+            <li>
+                @Html.ActionLink("Cerrar Sesión", "CerrarSesion", "Usuarios", routeValues: null, htmlAttributes: new { id = "logoutLink" })                
+            </li>
+
+        </ul>
+    }
+}
+else
+{
+    <ul class="JLMA-nav JLMA-navbar-nav navbar-right">        
+        <li>@Html.ActionLink("Iniciar Sesión", "IniciarSesion", "Usuarios", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

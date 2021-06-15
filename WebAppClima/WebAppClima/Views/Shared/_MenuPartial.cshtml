@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNet.Identity
+@if (User.Identity.IsAuthenticated)
+{
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <!-- Menú Sesión Iniciada -->
+        <ul class="JLMA-nav JLMA-navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Catálogos<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li>@Html.ActionLink("Usuarios", "Index", "Usuarios")</li>
+                    <li>@Html.ActionLink("Información del Clima", "Index", "Clima")</li>
+                </ul>
+            </li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="JLMA-nav JLMA-navbar-nav navbar-right">
+        <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+        <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+    </ul>
+}

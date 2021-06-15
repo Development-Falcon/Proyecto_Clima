@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1082
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppClima", "WebAppClima\WebAppClima.csproj", "{20598006-A05F-4AE0-A54C-226C95AA6C30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20598006-A05F-4AE0-A54C-226C95AA6C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20598006-A05F-4AE0-A54C-226C95AA6C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20598006-A05F-4AE0-A54C-226C95AA6C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20598006-A05F-4AE0-A54C-226C95AA6C30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0A55597-8911-49F0-8E15-2EF19ABC2426}
+	EndGlobalSection
+EndGlobal

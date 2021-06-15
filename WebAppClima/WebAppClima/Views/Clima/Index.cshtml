@@ -1,0 +1,93 @@
+﻿@model IEnumerable<WebAppClima.Models.Clima>
+
+@{
+    ViewBag.Filas = 0;
+    ViewBag.Title = "Catálogo de Clima";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Clima</h2>
+                </div>
+                <hr />
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <input type="button" class="btn btn-sm btn-success" value="Nuevo" onclick="location.href='@Url.Action("Crear", "Clima")'" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row mt-3">
+                        <div class="col-sm-12">
+                            <table id="tbUsuario" class="table table-striped table-bordered nowrap" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Ciudad)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Celsius)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Fahrenheit)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Latitud)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Longitud)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Fecha)
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        ViewBag.Filas += 1;
+                                        <tr>
+                                            <td>
+                                                @ViewBag.Filas
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Ciudad)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Celsius)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Fahrenheit)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Latitud)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Longitud)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Fecha)
+                                            </td>
+                                            <td>
+                                                @Html.Raw(HttpUtility.HtmlDecode(@Html.ActionLink(" Editar", "Editar", "Clima", new { id = item.Id }, new { @class = "btn btn-sm btn-primary mr-1 glyphicon glyphicon-edit" }).ToHtmlString()))
+                                                @Html.Raw(HttpUtility.HtmlDecode(@Html.ActionLink(" Eliminar", "Eliminar", "Clima", new { id = item.Id }, new { @class = "btn btn-sm btn-danger mr-1 glyphicon glyphicon-trash" }).ToHtmlString()))
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer" style="color:cornflowerblue; text-align:right">
+                    Total @(ViewBag.Filas) Registros
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿@model WebAppClima.Models.Usuarios
+
+@{
+    ViewBag.Title = "Catálogo de Usuarios";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @*
+        [JavCaHu] Este Formulario esta oculto por las class="modal fade" y se puede habilitar desde el controlador cambiando a class="modal-body" para hacerlo visible.
+    *@
+    <!-- Modal -->
+    <div class="modal-body" id="modalrol" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Creación de Usuarios</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="location.href='@Url.Action("Index", "Usuarios")'">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Usuario, "Nombre Usuario", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.Usuario, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Usuario, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal" onclick="location.href='@Url.Action("Index", "Usuarios")'">Cerrar</button>
+                    <button id="btnGuardarCambios" type="submit" class="btn btn-sm btn-primary" value="Crear">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

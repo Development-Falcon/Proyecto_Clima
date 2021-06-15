@@ -1,0 +1,233 @@
+﻿/* ----------------------------------------------------------------------------------------------------------
+ * NOTA: COMIENCE EL TEXTO DE LICENCIA
+ *
+ * JLMA-Ingenieros le otorga el derecho de usar estos archivos de script para el 
+ * único propósito de: (i) interactuar a través de su navegador con JLMA-Ingenieros
+ * sitio web o servicio en línea, sujeto a la licencia o uso aplicable términos;
+ * o (ii) usar los archivos incluidos con un tema de producto de JLMA-Ingenieros a los
+ * términos de licencia de ese producto. JLMA-Ingenieros se reserva todos los demás
+ * derechos sobre el archivos no otorgados expresamente por JLMA-Ingenieros, ya sea por implicación,
+ * impedimento o de otro modo. Los avisos y licencias a continuación son solo para fines informativos.
+ *
+ * NOTA: FIN DE TEXTO DE LICENCIA
+* ---------------------------------------------------------------------------------------------------------- */
+/*!
+ * Mis.Estilis.css v1.0.0
+ *
+ * Copyright 2021 JLMA, Inc
+ * Licenciado bajo la licencia JavCaHu v1.0
+ * http://www.JLMA-Ingenieros.com.co/licencia/LICENCIA-1.0
+ *
+ * Diseñado y construido con todo el amor del mundo por @JLMA y @JavCaHu.
+ */
+
+/*! Licencia v1.0 | JLMA | JavCaHu */
+.JLMA-nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.JLMA-nav > li {
+    position: relative;
+    display: block;
+}
+
+.JLMA-nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.JLMA-nav > li > a:hover,
+.JLMA-nav > li > a:focus {
+    text-decoration: none;
+    background-color: #eeeeee;
+}
+
+.JLMA-nav > li.disabled > a {
+    color: #999999;
+}
+
+.JLMA-nav > li.disabled > a:hover,
+.JLMA-nav > li.disabled > a:focus {
+    color: #999999;
+    text-decoration: none;
+    cursor: not-allowed;
+    background-color: transparent;
+}
+
+.JLMA-nav .open > a,
+.JLMA-nav .open > a:hover,
+.JLMA-nav .open > a:focus {
+    background-color: #eeeeee;
+    border-color: #428bca;
+}
+
+.JLMA-nav .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+.JLMA-nav > li > a > img {
+    max-width: none;
+}
+
+.JLMA-navbar-nav {
+	margin: 7.5px -15px;
+}
+
+.JLMA-navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+@media (max-width: 767px) {
+    .JLMA-navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .JLMA-navbar-nav .open .dropdown-menu > li > a,
+    .JLMA-navbar-nav .open .dropdown-menu .dropdown-header {
+        padding: 5px 15px 5px 25px;
+    }
+
+    .JLMA-navbar-nav .open .dropdown-menu > li > a {
+        line-height: 20px;
+    }
+
+    .JLMA-navbar-nav .open .dropdown-menu > li > a:hover,
+    .JLMA-navbar-nav .open .dropdown-menu > li > a:focus {
+        background-image: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .JLMA-navbar-nav {
+        float: left;
+        margin: 0;
+    }
+
+    .JLMA-navbar-nav > li {
+        float: left;
+    }
+
+    .JLMA-navbar-nav > li > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.JLMA-navbar-brand {
+	color: yellow;
+	float: left;
+	padding: 15px 15px;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.JLMA-navbar-inverse {
+	background-color: #428bca;
+	border-color: #357ebd;
+}
+
+.JLMA-navbar-inverse .JLMA-navbar-nav > li > a {
+    color: #fff;
+}
+
+.JLMA-navbar-inverse .JLMA-navbar-nav > li > a:hover,
+.JLMA-navbar-inverse .JLMA-navbar-nav > li > a:focus {
+    color: #ff0;
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+
+.JLMA-navbar-inverse .JLMA-navbar-nav > .open > a,
+.JLMA-navbar-inverse .JLMA-navbar-nav > .open > a:hover,
+.JLMA-navbar-inverse .JLMA-navbar-nav > .open > a:focus {
+    color: #ffd800;
+    background-color: #3276b1;
+}
+
+.JLMA-form-control1 {
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: white;
+    vertical-align: middle;
+    background-color: #0094ff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.JLMA-form-control1:hover,
+.JLMA-form-control1:focus {
+    border-color: #66afe9;
+    color: #ffd800;
+    background-color: #3276b1;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.JLMA-form-control1[disabled],
+.JLMA-form-control1[readonly],
+fieldset[disabled] .JLMA-form-control1 {
+    cursor: not-allowed ;
+    background-color: #eeeeee;
+}
+
+textarea.JLMA-form-control1 {
+    height: auto;
+    color: #3276b1;
+    background-color: #ffd800;
+}
+
+.JLMA-form-control2 {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #ffd800;
+    vertical-align: middle;
+    background-color: #3276b1;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.JLMA-form-control2:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.JLMA-form-control2[disabled],
+.JLMA-form-control2[readonly],
+fieldset[disabled] .JLMA-form-control2 {
+    cursor: not-allowed;
+    background-color: #eeeeee;
+}
+
+textarea.JLMA-form-control2 {
+    height: auto;
+}
+/*-- Fin de mi Hoja de Estilos Personalizada JLMA-JavCaHu-2021 --*/
